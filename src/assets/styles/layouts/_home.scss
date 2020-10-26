@@ -1,0 +1,133 @@
+body {
+    background-color: #ffffff;
+    color: $font-current-color;
+    font-family: $font-family;
+    font-size: $text-m;
+    margin: 0;
+    padding: 30px;
+}
+
+section {
+    @include border-box-style;
+    background-color: $main-bg-color;
+    margin-bottom: 10px;
+    padding: 1.5rem;
+}
+
+%heading-abstract {
+    color: $font-heading-color;
+
+    a {
+        color: $font-heading-color;
+    }
+}
+
+h1 {
+    @extend %heading-abstract;
+    font-size: $text-xxl;
+}
+
+h2 {
+    @extend %heading-abstract;
+    font-size: $text-l;
+    font-variant: common-ligatures small-caps;
+}
+
+h3 {
+    @extend %heading-abstract;
+    font-size: $text-xl;
+    font-weight: bolder;
+}
+
+.main-heading {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+
+    h1, h3 {
+        height: 20px;
+        margin: 0;
+    }
+}
+
+a {
+    color: $font-current-color;
+    text-decoration: wavy;
+}
+
+a:hover {
+    color: $font-link-color;
+}
+
+.colored-icon {
+    color: $font-icon-color;
+}
+
+.obliquous-text {
+    font-size: $text-s;
+    font-style: oblique;
+    font-weight: bolder;
+}
+
+.colored-text {
+    color: $font-icon-color;
+}
+
+.dark-text {
+    color: $font-heading-color;
+}
+
+.bargraph-list {
+    i {
+        padding-right: 4px;
+    }
+
+    ul {
+        padding-left: 0;
+    }
+
+    li {
+        border-radius: 10%;
+        color: #ffffff;
+        font-size: smaller;
+        height: 35px;
+        line-height: 35px;
+        list-style-type: none;
+        margin-bottom: 5px;
+        padding: 0 20px;
+        text-align: left;
+    }
+
+    .full-bar {
+        background: $str-bg-color;
+        width: 85%;
+    }
+
+    .threequarters-bar {
+        background: $med-bg-color;
+        width: 70%;
+    }
+
+    .half-bar {
+        background: $light-bg-color;
+        width: 60%;
+    }
+}
+
+.relevant-skills {
+    ul {
+        padding-left: 0;
+    }
+
+    li {
+        border-bottom: $thick-border-style;
+        list-style-type: none;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+    }
+
+    li:last-child {
+        border: 0;
+    }
+}
